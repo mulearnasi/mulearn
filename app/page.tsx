@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Navbar from "./components/navbar/page";
 import Home from "./components/home/page";
 import About from "./components/about/page";
 import Events from "./components/events/page";
@@ -12,6 +13,7 @@ import Footer from "./components/footer/page";
 export default function main() {
   return (
     <div >
+      <Navbar />  
       <Home />
       <About />
       <Events />
