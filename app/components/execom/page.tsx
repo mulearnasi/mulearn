@@ -28,8 +28,8 @@ const Execom = () => {
     { id: "32", name: "Abhinav Raj", role: "Design Team Member", image: "/execom/abhinav_raj.jpg", category: "Design Team" },
     { id: "9", name: "Kishan Karthik", role: "Media Lead", image: "/execom/Kishan Karthik.jpg", category: "Media Team" },
     { id: "10", name: "Anjali Krishna M", role: "Media Co-Lead", image: "/execom/Anjali Krishna M.jpg", category: "Media Team" },
-    { id: "11", name: "Jerin", role: "Media Team Member", image: "/execom/Jerin.jpg", category: "Media Team" },
-    { id: "12", name: "RAM MADHAV", role: "Media Team Member", image: "/execom/RAM MADHAV.jpg", category: "Media Team" },
+    { id: "11", name: "Jerin", role: "Media Team Member", image: "/execom/jerin.jpg", category: "Media Team" },
+    { id: "12", name: "RAM MADHAV", role: "Media Team Member", image: "/execom/RAM MADHAV.JPG", category: "Media Team" },
     { id: "13", name: "R B Ravish", role: "Technical Lead", image: "/execom/R B Ravish.jpg", category: "Technical Team" },
     { id: "14", name: "sreeram", role: "Technical Co-Lead", image: "/execom/sreeram.jpg", category: "Technical Team" },
     { id: "15", name: "Meenu K S", role: "Technical Team Member", image: "/execom/Meenu K S.jpeg", category: "Technical Team" },
@@ -132,7 +132,7 @@ const Execom = () => {
             <div key={currentIndex} className={`grid gap-6 transition-all duration-700 ${direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'} ${currentMembers.length === 3 || currentCategory === 'Communication Team' || currentCategory === 'IG Leads' ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2'}`}>
               {currentMembers.map((member) => (
                 <div key={`${member.category}-${member.id}-${member.name}`} className="group relative w-full aspect-[3/4] max-w-[220px] rounded-3xl overflow-hidden shadow-xl border-2 border-white/40 bg-white/30 backdrop-blur-md transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:border-violet-400">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={member.image} alt={member.name} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-violet-900/80 via-transparent to-transparent" />
                   <div className="absolute bottom-0 p-4 w-full">
                     <h4 className="text-white font-bold text-lg leading-tight">{member.name}</h4>

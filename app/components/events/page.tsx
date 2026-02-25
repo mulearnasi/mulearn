@@ -49,6 +49,8 @@ const Events = () => {
              <img 
               src={mainEvent.img} 
               alt={mainEvent.head} 
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>
@@ -93,6 +95,8 @@ const Events = () => {
                 <img 
                   src={event.img} 
                   alt={event.head} 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all"
                 />
               </div>
