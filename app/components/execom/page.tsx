@@ -17,23 +17,29 @@ const Execom = () => {
     { id: "1", name: "Sharika T R", role: "Staff Advisor", image: "/execom/sharika.jpeg", category: "Core Team" },
     { id: "2", name: "Mathew Joseph T A", role: "Campus Lead", image: "/execom/Mathew Joseph T A_1.png", category: "Core Team" },
     { id: "3", name: "Afiya Fathima", role: "Campus Co-Lead", image: "/execom/Afiya Fathima.jpg", category: "Core Team" },
+    { id: "3", name: "Snehamol K M", role: "Mentor", image: "/execom/Snehamol k m.jpg", category: "Core Team" },
     { id: "4", name: "GAUTHAM KRISHNA", role: "Creative Lead", image: "/execom/Gautham Krishna.jpeg", category: "Creative Team" },
     { id: "5", name: "Devika G A", role: "Creative Co-Lead", image: "/execom/Devika G A.jpg", category: "Creative Team" },
     { id: "6", name: "Fathima Neslin PN", role: "Creative Team Member", image: "/execom/Fathima Neslin PN.jpg", category: "Creative Team" },
+    { id: "7", name: "Amalendu", role: "Creative Team Member", image: "/execom/Amalendu S.jpg", category: "Creative Team" },
+    { id: "31", name: "Sreenivas Bhankthan", role: "Design Lead", image: "/execom/sreenivas.jpeg", category: "Design Team" },
     { id: "7", name: "Noel Sabu", role: "Design Co-Lead", image: "/execom/Noel Sabu.jpg", category: "Design Team" },
     { id: "8", name: "Joyal Aliyas", role: "Design Team Member", image: "/execom/Joyal Aliyas.jpg", category: "Design Team" },
+    { id: "32", name: "Abhinav Raj", role: "Design Team Member", image: "/execom/abhinav_raj.jpg", category: "Design Team" },
     { id: "9", name: "Kishan Karthik", role: "Media Lead", image: "/execom/Kishan Karthik.jpg", category: "Media Team" },
     { id: "10", name: "Anjali Krishna M", role: "Media Co-Lead", image: "/execom/Anjali Krishna M.jpg", category: "Media Team" },
-    { id: "11", name: "Amalendu S", role: "Media Team Member", image: "/execom/Amalendu S.jpg", category: "Media Team" },
+    { id: "11", name: "Jerin", role: "Media Team Member", image: "/execom/Jerin.jpg", category: "Media Team" },
     { id: "12", name: "RAM MADHAV", role: "Media Team Member", image: "/execom/RAM MADHAV.jpg", category: "Media Team" },
     { id: "13", name: "R B Ravish", role: "Technical Lead", image: "/execom/R B Ravish.jpg", category: "Technical Team" },
     { id: "14", name: "sreeram", role: "Technical Co-Lead", image: "/execom/sreeram.jpg", category: "Technical Team" },
     { id: "15", name: "Meenu K S", role: "Technical Team Member", image: "/execom/Meenu K S.jpeg", category: "Technical Team" },
     { id: "16", name: "Nahana Fathima", role: "Technical Team Member", image: "/execom/Nahana Fathima.jpg", category: "Technical Team" },
     { id: "17", name: "Harijith Asokan", role: "Communication Lead", image: "/execom/Harijith Asokan.jpg", category: "Communication Team" },
+    { id: "33", name: "Abhishek Prabhakaran", role: "Communication Co-Lead", image: "/execom/abhishek_prabhakaran.jpg", category: "Communication Team" },
     { id: "18", name: "Anna Joy", role: "Communication Team Member", image: "/execom/Anna Joy.jpg", category: "Communication Team" },
     { id: "19", name: "Malavika Rajan", role: "Communication Team Member", image: "/execom/Malavika Rajan.jpg", category: "Communication Team" },
     { id: "20", name: "Aswathy Prasad", role: "Communication Team Member", image: "/execom/Aswathy Prasad.jpg", category: "Communication Team" },
+    { id: "34", name: "Joseph Sijo", role: "Communication Team Member", image: "/execom/Athul Asok.jpg", category: "Communication Team" },
     { id: "21", name: "Asher Antony Louis", role: "Outreach Lead", image: "/execom/Asher Antony Louis.jpg", category: "Outreach Team" },
     { id: "22", name: "Aisha Fathihah", role: "Outreach Co-Lead", image: "/execom/Aisha Fathihah.jpeg", category: "Outreach Team" },
     { id: "23", name: "Devika shankar D", role: "Outreach team Member", image: "/execom/Devika shankar D.jpg", category: "Outreach Team" },
@@ -97,7 +103,7 @@ const Execom = () => {
               <div className="h-2 w-20 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mt-4 mx-auto lg:mx-0" />
             </div>
 
-            <div className="h-24 md:h-32 flex items-center overflow-hidden">
+            <div className="h-24 md:h-42 flex items-center overflow-hidden">
               <h3 key={currentCategory} className={`text-4xl md:text-6xl font-black bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent transition-all duration-700 ${direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'}`}>
                 {currentCategory}
               </h3>
@@ -116,14 +122,14 @@ const Execom = () => {
                   <button key={i} onClick={() => { setCurrentIndex(i); setIsAutoPlaying(false); }} className={`h-2 transition-all duration-300 ${currentIndex === i ? 'w-8 bg-violet-600 rounded-full' : 'w-2 bg-violet-300 rounded-full'}`} />
                 ))}
               </div>
-            </div>
+            </div>  
           </div>
 
           {/* Right Side: Cards */}
           <div className="lg:col-span-7 flex flex-col items-center">
-            <div key={currentIndex} className={`grid gap-6 transition-all duration-700 ${direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'} ${currentMembers.length === 3 ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2'}`}>
-              {currentMembers.map((member, idx) => (
-                <div key={member.id} className="group relative w-full aspect-[3/4] max-w-[220px] rounded-3xl overflow-hidden shadow-xl border-2 border-white/40 bg-white/30 backdrop-blur-md transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:border-violet-400">
+            <div key={currentIndex} className={`grid gap-6 transition-all duration-700 ${direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'} ${currentMembers.length === 3 || currentCategory === 'Communication Team' ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2'}`}>
+              {currentMembers.map((member) => (
+                <div key={`${member.category}-${member.id}-${member.name}`} className="group relative w-full aspect-[3/4] max-w-[220px] rounded-3xl overflow-hidden shadow-xl border-2 border-white/40 bg-white/30 backdrop-blur-md transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:border-violet-400">
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-violet-900/80 via-transparent to-transparent" />
                   <div className="absolute bottom-0 p-4 w-full">
