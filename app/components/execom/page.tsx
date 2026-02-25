@@ -39,7 +39,7 @@ const Execom = () => {
     { id: "18", name: "Anna Joy", role: "Communication Team Member", image: "/execom/Anna Joy.jpg", category: "Communication Team" },
     { id: "19", name: "Malavika Rajan", role: "Communication Team Member", image: "/execom/Malavika Rajan.jpg", category: "Communication Team" },
     { id: "20", name: "Aswathy Prasad", role: "Communication Team Member", image: "/execom/Aswathy Prasad.jpg", category: "Communication Team" },
-    { id: "34", name: "Joseph Sijo", role: "Communication Team Member", image: "/execom/Athul Asok.jpg", category: "Communication Team" },
+    { id: "34", name: "Joseph Sijo", role: "Communication Team Member", image: "/execom/joseph.jpg", category: "Communication Team" },
     { id: "21", name: "Asher Antony Louis", role: "Outreach Lead", image: "/execom/Asher Antony Louis.jpg", category: "Outreach Team" },
     { id: "22", name: "Aisha Fathihah", role: "Outreach Co-Lead", image: "/execom/Aisha Fathihah.jpeg", category: "Outreach Team" },
     { id: "23", name: "Devika shankar D", role: "Outreach team Member", image: "/execom/Devika shankar D.jpg", category: "Outreach Team" },
