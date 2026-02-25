@@ -50,6 +50,8 @@ const Execom = () => {
     { id: "28", name: "Kamal Krishna", role: "game development", image: "/execom/Kamal-Krishna.jpg", category: "IG Leads" },
     { id: "29", name: "Daniel Joshy ", role: "UI/UX Design", image: "/execom/Daniel Joshy .png", category: "IG Leads" },
     { id: "30", name: "Sreeram", role: "CYBER SECURITY", image: "/execom/Sreeram.jpg", category: "IG Leads" },
+    { id: "30", name: "Mathew Joseph T A", role: "Web Dev", image: "/execom/Mathew Joseph T A_1.png", category: "IG Leads" },
+    { id: "30", name: "Aryathaa P R", role: "Artificial Intelligence", image: "/execom/aryatha.jpg", category: "IG Leads" },
     
   ];
 
@@ -127,7 +129,7 @@ const Execom = () => {
 
           {/* Right Side: Cards */}
           <div className="lg:col-span-7 flex flex-col items-center">
-            <div key={currentIndex} className={`grid gap-6 transition-all duration-700 ${direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'} ${currentMembers.length === 3 || currentCategory === 'Communication Team' ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2'}`}>
+            <div key={currentIndex} className={`grid gap-6 transition-all duration-700 ${direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'} ${currentMembers.length === 3 || currentCategory === 'Communication Team' || currentCategory === 'IG Leads' ? 'grid-cols-1 md:grid-cols-3' : 'grid-cols-2'}`}>
               {currentMembers.map((member) => (
                 <div key={`${member.category}-${member.id}-${member.name}`} className="group relative w-full aspect-[3/4] max-w-[220px] rounded-3xl overflow-hidden shadow-xl border-2 border-white/40 bg-white/30 backdrop-blur-md transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:border-violet-400">
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
