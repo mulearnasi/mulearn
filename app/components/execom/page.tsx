@@ -15,6 +15,8 @@ const Execom = () => {
   // Direct Data Integration
   const teamMembers: Member[] = [
     { id: "1", name: "Sharika T R", role: "Staff Advisor", image: "/execom/sharika.jpeg", category: "Core Team" },
+    { id: "35", name: "Anila S", role: "Co-Enabler", image: "/execom/Anila S.jpeg", category: "Enablers" },
+    { id: "36", name: "Naznin M Ali", role: "Co-Enabler", image: "/execom/Naznin M Ali.jpeg", category: "Enablers" },
     { id: "2", name: "Mathew Joseph T A", role: "Campus Lead", image: "/execom/Mathew Joseph T A_1.png", category: "Core Team" },
     { id: "3", name: "Afiya Fathima", role: "Campus Co-Lead", image: "/execom/Afiya Fathima.jpg", category: "Core Team" },
     { id: "3", name: "Snehamol K M", role: "Mentor", image: "/execom/Snehamol k m.jpg", category: "Core Team" },
@@ -52,7 +54,7 @@ const Execom = () => {
     { id: "30", name: "Sreeram", role: "CYBER SECURITY", image: "/execom/sreeram.jpg", category: "IG Leads" },
     { id: "30", name: "Mathew Joseph T A", role: "Web Dev", image: "/execom/Mathew Joseph T A_1.png", category: "IG Leads" },
     { id: "30", name: "Aryathaa P R", role: "Artificial Intelligence", image: "/execom/aryatha.jpg", category: "IG Leads" },
-    
+
   ];
 
   const categories = [...new Set(teamMembers.map((m) => m.category))];
@@ -89,15 +91,15 @@ const Execom = () => {
 
   return (
     <section id="team" className="relative w-full min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#f3e8ff] via-[#ddd6fe] to-[#f3e8ff] font-sans py-16 md:py-0">
-      
+
       {/* Decorative Floating Circles & Glows */}
       <div className="absolute top-[5vh] left-[5vw] w-2 h-2 bg-purple-500/50 rounded-full animate-float" />
       <div className="absolute top-[10vh] right-[8vw] w-3 h-3 bg-violet-500/60 rounded-full animate-float [animation-delay:0.3s]" />
       <div className="absolute bottom-[10%] left-[15%] w-[30vw] h-[30vw] bg-radial-purple opacity-30 blur-[60px] animate-pulse" />
-      
+
       <div className="container mx-auto px-6 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Side: Content */}
           <div className="lg:col-span-5 flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
             <div>
@@ -124,7 +126,7 @@ const Execom = () => {
                   <button key={i} onClick={() => { setCurrentIndex(i); setIsAutoPlaying(false); }} className={`h-2 transition-all duration-300 ${currentIndex === i ? 'w-8 bg-violet-600 rounded-full' : 'w-2 bg-violet-300 rounded-full'}`} />
                 ))}
               </div>
-            </div>  
+            </div>
           </div>
 
           {/* Right Side: Cards */}
@@ -144,13 +146,13 @@ const Execom = () => {
 
             {/* Mobile Navigation */}
             <div className="lg:hidden flex flex-col items-center gap-6 mt-12">
-               <div className="flex items-center gap-4">
-                 <NavButton onClick={prevSlide} direction="prev" disabled={isAnimating} />
-                 <NavButton onClick={nextSlide} direction="next" disabled={isAnimating} />
-               </div>
-               <button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="px-6 py-2 bg-white/60 backdrop-blur-sm border border-purple-200 rounded-full text-violet-700 font-medium text-sm hover:bg-violet-600 hover:text-white transition-all">
+              <div className="flex items-center gap-4">
+                <NavButton onClick={prevSlide} direction="prev" disabled={isAnimating} />
+                <NavButton onClick={nextSlide} direction="next" disabled={isAnimating} />
+              </div>
+              <button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="px-6 py-2 bg-white/60 backdrop-blur-sm border border-purple-200 rounded-full text-violet-700 font-medium text-sm hover:bg-violet-600 hover:text-white transition-all">
                 {isAutoPlaying ? "Pause auto-scroll" : "Resume auto-scroll"}
-               </button>
+              </button>
             </div>
           </div>
         </div>
