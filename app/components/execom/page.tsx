@@ -14,7 +14,7 @@ interface Member {
 const Execom = () => {
   // Direct Data Integration
   const teamMembers: Member[] = [
-    { id: "1", name: "Sharika T R", role: "Staff Advisor", image: "/execom/sharika.jpeg", category: "Core Team" },
+    { id: "1", name: "Sharika T R", role: "Staff Advisor", image: "/execom/sharika.jpeg", category: "Enablers" },
     { id: "35", name: "Anila S", role: "Co-Enabler", image: "/execom/Anila S.jpeg", category: "Enablers" },
     { id: "36", name: "Naznin M Ali", role: "Co-Enabler", image: "/execom/Naznin M Ali.jpeg", category: "Enablers" },
     { id: "2", name: "Mathew Joseph T A", role: "Campus Lead", image: "/execom/Mathew Joseph T A_1.png", category: "Core Team" },
