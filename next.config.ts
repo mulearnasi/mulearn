@@ -1,7 +1,16 @@
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/newv",
+        destination: "https://forms.gle/your-google-form-link",
+        permanent: false, // keep false for forms
+      },
+    ];
+  },
 };
 
 export default nextConfig;
