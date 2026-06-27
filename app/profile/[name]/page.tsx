@@ -21,6 +21,9 @@ const LINKEDIN_MAP: Record<string, string> = {
   aaryathapr: "https://app.mulearn.org/profile/aaryathapr@mulearn",
   mathewjosephta: "https://www.linkedin.com/in/mathewjosephta/",
   anna: "https://www.linkedin.com/in/anna-joy-v-j-3b5049291/",
+  anila: "https://app.mulearn.org/profile/anilas-3@mulearn",
+  sharika: "https://app.mulearn.org/profile/sharikatr@mulearn",
+  naznin: "https://app.mulearn.org/profile/nazninmali@mulearn",
 };
 
 type ProfileRouteProps = {
