@@ -60,7 +60,7 @@ export default function EditProfileRedirect({ params }: { params: Promise<{ name
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               placeholder="https://linkedin.com/in/yourprofile"
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 outline-none transition-all"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 outline-none transition-all text-slate-900"
             />
           </div>
 
