@@ -1,4 +1,6 @@
 import { notFound, redirect } from "next/navigation";
+import { createAdminClient, APPWRITE_DB_ID, APPWRITE_COLLECTION_ID } from "../../lib/appwrite";
+import { Query } from "node-appwrite";
 
 const LINKEDIN_MAP: Record<string, string> = {
   // Add or edit entries using: key -> https://www.linkedin.com/in/<profile>
@@ -35,7 +37,33 @@ type ProfileRouteProps = {
 export default async function ProfileLinkedInRedirect({ params }: ProfileRouteProps) {
   const { name } = await params;
   const key = decodeURIComponent(name).trim().toLowerCase();
-  const destination = LINKEDIN_MAP[key];
+
+  let destination = "";
+
+  try {
+    if (process.env.APPWRITE_API_KEY) {
+      const { databases } = createAdminClient();
+      
+      const response = await databases.listDocuments(
+        APPWRITE_DB_ID,
+        APPWRITE_COLLECTION_ID,
+        [
+          Query.equal("username", key),
+          Query.limit(1)
+        ]
+      );
+
+      if (response.documents.length > 0) {
+        destination = response.documents[0].redirect_url;
+      }
+    }
+  } catch (error) {
+    console.error("Failed to fetch redirect URL from Appwrite:", error);
+  }
+
+  if (!destination) {
+    destination = LINKEDIN_MAP[key];
+  }
 
   if (!destination) {
     notFound();
