@@ -14,10 +14,10 @@ export default function QRScannerPage() {
         // Attempt to parse as a full URL (e.g., https://yoursite.com/profile/anila)
         const urlObj = new URL(text);
         const pathSegments = urlObj.pathname.split('/').filter(Boolean);
-        
+
         // Find 'profile' in the path and get the next segment
         const profileIndex = pathSegments.indexOf('profile');
-        
+
         if (profileIndex !== -1 && profileIndex + 1 < pathSegments.length) {
           const username = pathSegments[profileIndex + 1];
           router.push(`/profile/${username}/edit`);
@@ -27,12 +27,12 @@ export default function QRScannerPage() {
       } catch (e) {
         // Fallback for strings that aren't valid URLs (e.g. "anila" or "/profile/anila")
         if (text.includes('/profile/')) {
-           const parts = text.split('/profile/');
-           const remaining = parts[1].split('/')[0];
-           if (remaining) {
-             router.push(`/profile/${remaining}/edit`);
-             return;
-           }
+          const parts = text.split('/profile/');
+          const remaining = parts[1].split('/')[0];
+          if (remaining) {
+            router.push(`/profile/${remaining}/edit`);
+            return;
+          }
         }
         setError("Invalid QR Code. Please scan a valid profile badge.");
       }
@@ -48,7 +48,7 @@ export default function QRScannerPage() {
         </div>
 
         <div className="w-full max-w-sm aspect-square bg-slate-100 rounded-xl overflow-hidden relative border-2 border-slate-200">
-          <Scanner 
+          <Scanner
             onScan={(result) => {
               if (result && result.length > 0) {
                 handleScan(result[0].rawValue);
@@ -66,7 +66,7 @@ export default function QRScannerPage() {
             {error}
           </div>
         )}
-        
+
         <div className="mt-6 text-sm text-slate-400 text-center">
           Make sure the QR code is well-lit and in focus. Camera permissions are required.
         </div>
