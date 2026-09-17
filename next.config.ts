@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         destination: "https://mulearn-teachers-day.vercel.app/", // REPLACE_THIS_WITH_YOUR_LINK
         permanent: false,
       },
+      {
+        source: "/mu-scribble",
+        destination: "https://forms.gle/rvx5NmzG7gcw7Ub48", // REPLACE_THIS_WITH_YOUR_LINK
+        permanent: false,
+      },
     ];
   },
 };
